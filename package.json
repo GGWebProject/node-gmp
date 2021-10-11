@@ -1,0 +1,46 @@
+{
+  "name": "gmp",
+  "version": "1.0.0",
+  "description": "Node global mentoring program",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "task1": "nodemon ./node_modules/.bin/babel-node task1/index.js",
+    "task2": "nodemon ./node_modules/.bin/babel-node task2/index.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "./src"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GGWebProject/node-gmp.git"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Vitali Hantarenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GGWebProject/node-gmp/issues"
+  },
+  "homepage": "https://github.com/GGWebProject/node-gmp#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  }
+}
