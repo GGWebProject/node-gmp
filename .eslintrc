@@ -7,12 +7,21 @@
       "jest": true
     },
     "extends": [
-      "airbnb-base"
+      "airbnb-base",
+      "airbnb-typescript/base"
     ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".ts", ".tsx"]
+        }
+      }
+    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "ecmaVersion": 12,
       "sourceType": "module",
+      "project": "./tsconfig.json",
       "ecmaFeatures": {
         "arrowFunctions": true,
         "blockBindings": true,
@@ -36,12 +45,17 @@
         "@typescript-eslint"
     ],
     "rules": {
+      // start OWN rules
+      "@typescript-eslint/lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+      "@typescript-eslint/no-extra-semi": 2,
+      "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+      "class-methods-use-this": 0,
+      "@typescript-eslint/import/prefer-default-export": 0,
+      "import/prefer-default-export": 0,
+      "comma-dangle": ["error", "always-multiline"],
+      // end OWN rules
       "no-debugger": 1,
       // Possible errors
-      "comma-dangle": [
-        2,
-        "never"
-      ],
       "no-cond-assign": [
         2,
         "always"
@@ -218,7 +232,7 @@
       ],
       "indent": [
         2,
-        4,
+        2,
         {
           "SwitchCase": 1
         }
