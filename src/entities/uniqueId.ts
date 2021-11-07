@@ -1,0 +1,1 @@
+export type UniqueIdType = string;
