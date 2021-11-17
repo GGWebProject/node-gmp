@@ -2,7 +2,7 @@
   "name": "gmp",
   "version": "1.0.0",
   "description": "Node global mentoring program",
-  "main": "src/index.js",
+  "main": "src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --config nodemon.json"
@@ -25,14 +25,33 @@
     "@babel/core": "^7.15.8",
     "@babel/node": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
+    "@types/express": "^4.17.13",
+    "@types/faker": "^5.5.9",
+    "@types/node": "^16.11.6",
+    "@types/uuid": "^8.3.1",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
     "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.2",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.13",
+    "prettier": "2.4.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-joi-validation": "^5.0.0",
+    "joi": "^17.4.2",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.9.0"
+  }
 }
